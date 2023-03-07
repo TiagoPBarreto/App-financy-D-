@@ -1,7 +1,10 @@
+import 'dart:developer';
+
 import 'package:app_financy/common/constants/app_colors.dart';
 import 'package:app_financy/common/constants/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../common/widgets/multi_text_button.dart';
 import '../../common/widgets/primary_button.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -28,14 +31,24 @@ class OnboardingPage extends StatelessWidget {
                 style: AppTextStyles.mediumText
                     .copyWith(color: AppColors.greenlightTwo)),
             Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32.0,
-                vertical: 16.0
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 32.0, vertical: 16.0),
+              child: PrimaryButton(
+                text: 'Get Started',
+                onPressed: () {},
               ),
-              child: PrimaryButton(text:'Get Started', onPressed: (){},),
             ),
-            Text('Already Have Account? Log in',
-                style: AppTextStyles.smallText.copyWith(color: AppColors.grey)),
+            MultiTextButton(
+              onPressed: () => ('tap'),
+              children: [
+                Text('Already Have Account? ',
+                    style: AppTextStyles.smallText
+                        .copyWith(color: AppColors.grey)),
+                Text('Log in',
+                    style: AppTextStyles.smallText
+                        .copyWith(color: AppColors.greenlightTwo))
+              ],
+            ),
             const SizedBox(
               height: 24.0,
             )
@@ -45,5 +58,3 @@ class OnboardingPage extends StatelessWidget {
     );
   }
 }
-
-
