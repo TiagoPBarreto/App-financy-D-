@@ -41,12 +41,12 @@ class OnboardingPage extends StatelessWidget {
             ),
           ),
           MultiTextButton(
-            onPressed: () => ('tap'),
+            onPressed: () => Navigator.pushNamed(context, NamedRoute.signIn),
             children: [
               Text('Already Have Account? ',
                   style:
                       AppTextStyles.smallText.copyWith(color: AppColors.grey)),
-              Text('Log in',
+              Text('Sign in',
                   style: AppTextStyles.smallText
                       .copyWith(color: AppColors.greenTwo))
             ],

@@ -4,4 +4,5 @@ class NamedRoute {
   static const String initial = "/";
   static const String splash = "splash";
   static const String signUp = "signUp";
+  static const String signIn = "signIn";
 }

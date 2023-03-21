@@ -21,7 +21,7 @@ class SignUpController extends ChangeNotifier {
     _changeState(SignUpLoadingState());
 
     try {
-      await _service.signUp(email: email, password: password);
+      await _service.signUp(name: name, email: email, password: password);
       _changeState(SignUpSuccessState());
     } catch (e) {
       _changeState(SignUpErrorState(e.toString()));

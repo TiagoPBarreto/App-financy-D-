@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "686636921631",
+    "project_id": "financy-app-dmais",
+    "storage_bucket": "financy-app-dmais.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686636921631:android:c54cbe6548f71e481f362a",
+        "android_client_info": {
+          "package_name": "com.example.app_financy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686636921631-sidonob24ndmk8ijk12jnb8480ctgs3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsZB_al8bzv_rZhcVy-eDOPNun3jwzyqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686636921631-sidonob24ndmk8ijk12jnb8480ctgs3k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "686636921631-qovt611vdbg3muc1f4hcpbj6bv9virki.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.appFinancy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

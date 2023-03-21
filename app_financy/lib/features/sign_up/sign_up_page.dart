@@ -2,9 +2,11 @@
 
 import 'dart:developer';
 
+import 'package:app_financy/common/constants/routes.dart';
 import 'package:app_financy/common/util/validator.dart';
 import 'package:app_financy/features/sign_up/sign_up_controller.dart';
 import 'package:app_financy/features/sign_up/sign_up_state.dart';
+import 'package:app_financy/locator.dart';
 import 'package:app_financy/services/mock_auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +31,7 @@ class _SignUpPageState extends State<SignUpPage> {
   final _passwordController = TextEditingController();
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
-  final _controller = SignUpController(MockAuthService());
+  final _controller = locator.get<SignUpController>();
 
   @override
   void dispose() {
@@ -106,7 +108,6 @@ class _SignUpPageState extends State<SignUpPage> {
                     validator: Validator.validatePassword,
                   ),
                   PasswordFormField(
-                    controller: _emailController,
                     labelText: "Confirm your Password",
                     hintText: "**********",
                     validator: (value) => Validator.validateConfirmPassword(
@@ -137,12 +138,13 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
           ),
           MultiTextButton(
-            onPressed: () => ('tap'),
+            onPressed: () =>
+                Navigator.popAndPushNamed(context, NamedRoute.signIn),
             children: [
               Text('Already Have Account? ',
                   style:
                       AppTextStyles.smallText.copyWith(color: AppColors.grey)),
-              Text('Log in',
+              Text('Sign in',
                   style: AppTextStyles.smallText
                       .copyWith(color: AppColors.greenTwo))
             ],
