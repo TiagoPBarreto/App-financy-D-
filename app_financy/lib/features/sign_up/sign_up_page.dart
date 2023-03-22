@@ -53,14 +53,7 @@ class _SignUpPageState extends State<SignUpPage> {
       }
       if (_controller.state is SignUpSuccessState) {
         Navigator.pop(context);
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => const Scaffold(
-                      body: Center(
-                        child: Text("Nova Tela"),
-                      ),
-                    )));
+        Navigator.pushReplacementNamed(context, NamedRoute.home);
       }
       if (_controller.state is SignUpErrorState) {
         final errorMessage = _controller.state as SignUpErrorState;
